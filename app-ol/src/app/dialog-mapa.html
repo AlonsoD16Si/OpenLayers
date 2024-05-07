@@ -1,0 +1,7 @@
+<mat-dialog-content>
+    <app-map (enviar)="recibir($event)"></app-map>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Aceptar</button>
+</mat-dialog-actions>

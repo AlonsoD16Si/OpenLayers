@@ -1,1 +1,17 @@
-<app-map></app-map>
+<!-- <app-map></app-map> -->
+
+
+<button mat-raised-button (click)="openDialog()">Abrir Mapa</button>
+<button mat-raised-button (click)="abrirMapa(dialogMapa)">Abrir Mapa2</button>
+
+
+
+<ng-template #dialogMapa>
+    <mat-dialog-content>
+        <app-map></app-map>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button matDialogClose color="primary">Cerrar</button>
+        <button mat-button matDialogClose class="mat-raised-button mat-primary" (click)="saveMapa()">Aceptar</button>
+    </mat-dialog-actions>
+</ng-template>
